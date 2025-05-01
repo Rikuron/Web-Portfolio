@@ -2,26 +2,38 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useTheme } from './ThemeContext';
+import html5 from '../assets/images/stack-icons/html-5.png';
+import css3 from '../assets/images/stack-icons/css-3.png';
+import js from '../assets/images/stack-icons/js.png';
+import php from '../assets/images/stack-icons/php.png';
+import java from '../assets/images/stack-icons/java.png';
+import python from '../assets/images/stack-icons/python.png';
+import tailwind from '../assets/images/stack-icons/tailwind.png';
+import nodejs from '../assets/images/stack-icons/nodejs.png';
+import reactjs from '../assets/images/stack-icons/reactjs.png';
+import mysql from '../assets/images/stack-icons/mysql.png';
+import redis from '../assets/images/stack-icons/redis.png';
+import mongodb from '../assets/images/stack-icons/mongodb.png';
 
 const Tech = () => {
   const { theme } = useTheme();
 
   const firstHalfIcons = [
-    { img: 'html-5.png'},
-    { img: 'css-3.png'},
-    { img: 'js.png'},
-    { img: 'php.png'},
-    { img: 'java.png'},
-    { img: 'python.png'}
+    { src: html5, alt: 'HTML5' },
+    { src: css3, alt: 'CSS3' },
+    { src: js, alt: 'JavaScript' },
+    { src: php, alt: 'PHP' },
+    { src: java, alt: 'Java' },
+    { src: python, alt: 'Python' }
   ];
 
   const secondHalfIcons = [
-    { img: 'tailwind.png'},
-    { img: 'nodejs.png'},
-    { img: 'reactjs.png'},
-    { img: 'mysql.png'},
-    { img: 'redis.png'},
-    { img: 'mongodb.png'}
+    { src: tailwind, alt: 'Tailwind' },
+    { src: nodejs, alt: 'NodeJS' },
+    { src: reactjs, alt: 'ReactJS' },
+    { src: mysql, alt: 'MySQL' },
+    { src: redis, alt: 'Redis' },
+    { src: mongodb, alt: 'MongoDB' }
   ];
 
   return (
@@ -39,8 +51,8 @@ const Tech = () => {
             {firstHalfIcons.map((tech, index) => (
               <div key={`first-${index}`} className="h-16 w-16 mx-8 px-4 py-2 rounded-lg flex flex-col items-center justify-center">
                 <img 
-                  src={`/src/assets/images/stack-icons/${tech.img}`} 
-                  alt={tech.name}
+                  src={tech.src} 
+                  alt={tech.alt}
                   className="max-h-[70px] max-w-[70px] object-contain"
                 />
               </div>
@@ -49,8 +61,8 @@ const Tech = () => {
             {firstHalfIcons.map((tech, index) => (
               <div key={`first-dupe-${index}`} className="h-16 w-16 mx-8 px-4 py-2 text-white rounded-lg flex flex-col items-center justify-center">
                 <img 
-                  src={`/src/assets/images/stack-icons/${tech.img}`} 
-                  alt={tech.name}
+                  src={tech.src} 
+                  alt={tech.alt}
                   className="max-h-[70px] max-w-[70px] object-contain"
                 />
               </div>
@@ -64,8 +76,8 @@ const Tech = () => {
             {secondHalfIcons.map((tech, index) => (
               <div key={`second-${index}`} className="h-16 w-16 mx-8 px-4 py-2 text-white rounded-lg flex flex-col items-center justify-center">
                 <img 
-                  src={`/src/assets/images/stack-icons/${tech.img}`} 
-                  alt={tech.name}
+                  src={tech.src} 
+                  alt={tech.alt}
                   className="max-h-[70px] max-w-[70px] object-contain"
                 />
               </div>
@@ -74,8 +86,8 @@ const Tech = () => {
             {secondHalfIcons.map((tech, index) => (
               <div key={`second-dupe-${index}`} className="h-16 w-16 mx-8 px-4 py-2 text-white rounded-lg flex flex-col items-center justify-center">
                 <img 
-                  src={`/src/assets/images/stack-icons/${tech.img}`} 
-                  alt={tech.name}
+                  src={tech.src} 
+                  alt={tech.alt}
                   className="max-h-[70px] max-w-[70px] object-contain"
                 />
               </div>
