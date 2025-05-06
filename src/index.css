@@ -26,13 +26,13 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 20px));
   }
 }
 
 @keyframes marquee-reverse {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 20px));
   }
   100% {
     transform: translateX(0%);
@@ -40,11 +40,15 @@
 }
 
 .animate-marquee {
-  animation: marquee 45s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 
 .animate-marquee-reverse {
-  animation: marquee-reverse 45s linear infinite;
+  animation: marquee-reverse 15s linear infinite;
+}
+
+.animation-paused {
+  animation-play-state: paused !important;
 }
 
 ::-webkit-scrollbar {
