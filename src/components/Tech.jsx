@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useTheme } from './ThemeContext';
@@ -17,19 +17,14 @@ import mongodb from '../assets/images/stack-icons/mongodb.png';
 
 const Tech = () => {
   const { theme } = useTheme();
-  const [isPaused1, setIsPaused1] = useState(false);
-  const [isPaused2, setIsPaused2] = useState(false);
 
-  const firstHalfIcons = [
+  const icons = [
     { src: html5, alt: 'HTML5' },
     { src: css3, alt: 'CSS3' },
     { src: js, alt: 'JavaScript' },
     { src: php, alt: 'PHP' },
     { src: java, alt: 'Java' },
-    { src: python, alt: 'Python' }
-  ];
-
-  const secondHalfIcons = [
+    { src: python, alt: 'Python' },
     { src: tailwind, alt: 'Tailwind' },
     { src: nodejs, alt: 'NodeJS' },
     { src: reactjs, alt: 'ReactJS' },
@@ -38,10 +33,11 @@ const Tech = () => {
     { src: mongodb, alt: 'MongoDB' }
   ];
 
-  const handleMouseEnter1 = () => setIsPaused1(true);
-  const handleMouseLeave1 = () => setIsPaused1(false);
-  const handleMouseEnter2 = () => setIsPaused2(true);
-  const handleMouseLeave2 = () => setIsPaused2(false);
+  const firstSliderIcons = icons.slice(0, 6);
+  const secondSliderIcons = icons.slice(6, 12);
+
+  const iconWidth = '85px';
+  const iconHeight = '85px'; 
 
   return (
     <div className="my-25 overflow-hidden">
@@ -53,44 +49,45 @@ const Tech = () => {
         transition={{duration: 0.8, delay: 0.2}} 
         className={`bg-gradient-to-r ${theme === 'dark' ? 'from-black via-blue-800 to-black border-blue-900' : 'from-white via-blue-300/35 to-white border-cyan-300'} py-6 border-y-8`}
       >
-        <div className="relative w-full h-28 flex items-center justify-center overflow-hidden">
-          <div
-            className={`absolute gap-10 flex animate-marquee whitespace-nowrap ${isPaused1 ? 'animation-paused' : ''}`}
-          >
-            {[...firstHalfIcons, ...firstHalfIcons].map((tech, index) => (
-              <div 
-                key={`first-${index}`} 
-                className="h-16 w-16 mx-8 px-4 py-2 rounded-lg flex flex-col items-center justify-center"
-              >
+        <div 
+          className="slider" 
+          style={{
+            '--width': iconWidth,
+            '--height': iconHeight,
+            '--quantity': firstSliderIcons.length
+          }}
+        >
+          <div className="list">
+            {firstSliderIcons.map((icon, index) => (
+              <div className="item" style={{ '--position': index + 1 }} key={`first-${icon.alt}-${index}`}>
                 <img 
-                  src={tech.src} 
-                  alt={tech.alt}
-                  title={tech.alt}
-                  className="max-h-[70px] max-w-[70px] object-contain"
-                  onMouseEnter={handleMouseEnter1}
-                  onMouseLeave={handleMouseLeave1}
+                  src={icon.src} 
+                  alt={icon.alt}
+                  title={icon.alt}
+                  className="max-h-full max-w-full object-contain p-2" // Added padding for visual spacing within item
                 />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative w-full h-20 flex items-center justify-center overflow-hidden mt-4">
-          <div
-            className={`absolute gap-10 flex animate-marquee-reverse whitespace-nowrap ${isPaused2 ? 'animation-paused' : ''}`}
-          >
-            {[...secondHalfIcons, ...secondHalfIcons].map((tech, index) => (
-              <div 
-                key={`second-${index}`} 
-                className="h-16 w-16 mx-8 px-4 py-2 text-white rounded-lg flex flex-col items-center justify-center"
-                onMouseEnter={handleMouseEnter2}
-                onMouseLeave={handleMouseLeave2}
-              >
+        <div 
+          className="slider mt-6" // Added margin-top for spacing between sliders
+          reverse="true" // Attribute to indicate reverse animation
+          style={{
+            '--width': iconWidth,
+            '--height': iconHeight,
+            '--quantity': secondSliderIcons.length
+          }}
+        >
+          <div className="list">
+            {secondSliderIcons.map((icon, index) => (
+              <div className="item" style={{ '--position': index + 1 }} key={`second-${icon.alt}-${index}`}>
                 <img 
-                  src={tech.src} 
-                  alt={tech.alt}
-                  title={tech.alt}
-                  className="max-h-[70px] max-w-[70px] object-contain"
+                  src={icon.src} 
+                  alt={icon.alt}
+                  title={icon.alt}
+                  className="max-h-full max-w-full object-contain p-2" // Added padding
                 />
               </div>
             ))}
