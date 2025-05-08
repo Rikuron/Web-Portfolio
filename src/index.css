@@ -64,6 +64,10 @@
 
 .slider:hover .item{
     animation-play-state: paused!important;
+    filter: blur(2px);
+}
+.slider .item:hover{
+    filter: blur(0);
 }
 
 /* Styles for the reversed slider */
