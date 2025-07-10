@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Josh Eugenio's Web Portfolio
 
-## Getting Started
+Welcome to the source code for my personal web portfolio. This project is a redo of my previous personal web portfolio. Previously built using Vite, now I'm using Next.js, as well as React and Tailwind CSS, showcasing my skills, projects, and professional background as a web developer. It's designed to be clean, responsive, and performant, featuring a modern technology stack and best practices.
 
-First, run the development server:
+<!-- You can add a screenshot of your portfolio here -->
+<!-- ![Portfolio Screenshot](link-to-your-screenshot.png) -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
+
+## ✨ Features
+
+-   **Modern Stack**: Built with the latest features of Next.js 14 and the App Router.
+-   **Responsive Design**: Fully responsive layout that looks great on all devices, from mobile phones to desktop screens.
+-   **Dark/Light Mode**: User-selectable dark and light themes that persist across sessions using `localStorage`.
+-   **Smooth Scrolling**: Seamless navigation between sections with smooth scroll animations.
+-   **Optimized Performance**: Leverages Server Components for static content and Client Components for interactivity, ensuring a fast user experience.
+-   **Component-Based Architecture**: A clean and organized codebase with reusable components for easy maintenance and scalability.
+
+---
+
+## 🛠️ Tech Stack
+
+This portfolio is built with a focus on modern web development technologies:
+
+-   **[Next.js](https://nextjs.org/)**: A React framework for building full-stack web applications.
+-   **[React](https://react.dev/)**: A JavaScript library for building user interfaces.
+-   **[TypeScript](https://www.typescriptlang.org/)**: A statically typed superset of JavaScript that adds type safety.
+-   **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+-   **[React Icons](https://react-icons.github.io/react-icons/)**: A library for including popular icons in React projects.
+-   **[ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)**: For maintaining code quality and consistent formatting.
+
+---
+
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+Make sure you have Node.js (version 18.x or later) and npm installed on your machine.
+
+-   `npm`
+    ```sh
+    npm install npm@latest -g
+    ```
+
+### Installation
+
+1.  **Clone the repository**
+    ```sh
+    git clone https://github.com/Rikuron/Web-Portfolio.git
+    ```
+2.  **Navigate to the project directory**
+    ```sh
+    cd Web-Portfolio/next-ts
+    ```
+3.  **Install NPM packages**
+    ```sh
+    npm install
+    ```
+4.  **Run the development server**
+    ```sh
+    npm run dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+This project follows the standard Next.js App Router structure:
 
-To learn more about Next.js, take a look at the following resources:
+next-ts/ <br>
+├── public/ # Static assets like fonts and images <br>
+├── src/ <br>
+│ ├── app/ <br>
+│ │ ├── components/ # Shared Client Components (ThemeProvider, ClientLayout) <br>
+│ │ ├── sections/ # Larger page sections (Header, Footer, Projects) <br>
+│ │ ├── globals.css # Global styles <br>
+│ │ ├── layout.tsx # Root layout (Server Component) <br>
+│ │ └── page.tsx # Main page content (Server Component) <br>
+│ └── ... <br>
+├── eslint.config.mjs <br>
+├── next.config.ts <br>
+├── postcss.config.mjs <br>
+└── tsconfig.json <br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## CONTACT
 
-## Deploy on Vercel
+Josh Eugenio - [LinkedIn](https://www.linkedin.com/in/josh-eugenio-43148332b/) - josheugenio65@gmail.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project Link: [https://github.com/Rikuron/Web-Portfolio](https://github.com/Rikuron/Web-Portfolio)

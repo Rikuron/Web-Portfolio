@@ -5,11 +5,29 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: zen-dots;
+  src: url('/fonts/ZenDots-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbitron;
+  src: url('/fonts/Orbitron-Regular.ttf');
+}
+
+@font-face {
+  font-family: electrolize;
+  src: url('/fonts/Electrolize-Regular.ttf');
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-zen-dots: zen-dots, "sans-serif";
+  --font-orbitron: orbitron, "sans-serif";
+  --font-electrolize: electrolize, "sans-serif";
 }
 
 @media (prefers-color-scheme: dark) {
