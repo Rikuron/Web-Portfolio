@@ -114,7 +114,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Toggle */}
-      <div className={`fixed top-0 right-0 h-full w-full z-100 flex justify-center items-center p-12 transition-transform duration-300 ease-in-out md:hidden ${theme === 'dark' ? 'bg-black/60' : 'bg-[#F6F6F6]/45'} ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <div className={`fixed top-0 right-0 h-full w-full z-100 flex justify-center items-center p-12 transition-transform duration-300 ease-in-out md:hidden ${theme === 'dark' ? 'bg-black/70' : 'bg-[#F6F6F6]/90'} ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="absolute top-3 right-7 flex items-center space-x-2">
           <button 
             onClick={toggleTheme}
