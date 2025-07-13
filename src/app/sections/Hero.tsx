@@ -1,14 +1,13 @@
-"use client";
-
 import React from 'react';
 import Image from 'next/image';
 // import { motion } from 'framer-motion';
-import { useTheme } from '../components/ThemeProvider';
 import { handleNavClick } from '../utils/navigation';
 
-const Hero = () => {
-  const { theme } = useTheme();
+type SectionProps = {
+  theme: "light" | "dark";
+}
 
+const Hero = ({ theme }: SectionProps) => {
   const navigationItems = [
     { label: "Projects", href: "#projects", buttonStyle: "${theme === 'dark' ? 'text-white hover:shadow-[0_0_30px_10px_rgba(0,112,243,0.2)]' : 'text-blue-500 hover:text-white hover:shadow-[0_0_30px_10px_rgba(0,112,243,0.3)]'} border-blue-500 hover:bg-blue-500" },
     { label: "Contact", href: "#contact", buttonStyle: "${theme === 'dark' ? 'text-white hover:text-yellow-300 hover:shadow-[0_0_30px_10px_rgba(255,224,138,0.2)]' : 'text-black hover:text-yellow-300 hover:bg-black hover:shadow-[0_0_30px_10px_rgba(255,224,138,0.6)]'} border-yellow-300" }
