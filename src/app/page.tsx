@@ -3,6 +3,7 @@
 import React from 'react';
 import Hero from './sections/Hero'
 import Tech from './sections/Tech';
+import Projects from './sections/Projects';
 import { useTheme } from './components/ThemeProvider';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
     <div>
       <Hero theme={theme} />
       <Tech theme={theme} />
+      <Projects theme={theme} />
     </div>
   );
 }

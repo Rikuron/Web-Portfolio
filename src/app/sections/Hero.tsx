@@ -16,10 +16,10 @@ const Hero = ({ theme }: SectionProps) => {
   return (
     <div className={`container w-[70%] flex flex-col md:flex-row gap-8 md:gap-0 mx-auto items-center justify-center ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
       {/* Desktop Hero Image */}
-      <Image src="/images/hero_image.jpg" alt="Josh Pic" width={315} height={315} 
+      <Image src="https://res.cloudinary.com/dgwcnkzdg/image/upload/v1752419205/hero_image_dtlfh5.jpg" alt="Josh Pic" width={315} height={315} 
       className={`hero-image hidden md:flex rounded-full md:h-auto ${theme === 'dark' ? 'shadow-[0_0_30px_10px_rgba(255,255,255,0.5)]' : 'shadow-[0_0_30px_10px_rgba(0,0,0,0.5)]'}`} />
       {/* Mobile Hero Image: Circular if mobile*/}
-      <Image src="/images/hero_image_rounded.jpg" alt="Josh Pic" width={250} height={250} 
+      <Image src="https://res.cloudinary.com/dgwcnkzdg/image/upload/v1752419203/hero_image_rounded_tx7o4x.jpg" alt="Josh Pic" width={250} height={250} 
       className={`hero-image-mobile flex md:hidden rounded-full ${theme === 'dark' ? 'shadow-[0_0_30px_10px_rgba(255,255,255,0.5)]' : 'shadow-[0_0_30px_10px_rgba(0,0,0,0.5)]'}`} />
       
       

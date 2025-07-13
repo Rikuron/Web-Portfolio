@@ -8,12 +8,12 @@ type SectionProps = {
 
 const Tech = ({ theme }: SectionProps) => {
   return (
-    <div className="my-25 overflow-hidden">
-      <h2 className={`text-4xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-500 via-blue-700 to-black'} bg-clip-text text-transparent font-zen-dots text-center mb-8`}>
+    <div className="my-25 overflow-x-hidden">
+      <h2 className={`text-2xl md:text-4xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-500 via-blue-700 to-black'} bg-clip-text text-transparent font-zen-dots text-center mb-8`}>
         Skills and Technology Stack
       </h2>
 
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-black via-blue-800 to-black border-blue-900' : 'from-white via-blue-300/35 to-white border-cyan-300'} py-6 border-y-8 flex flex-col gap-12`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-black via-blue-800 to-black border-blue-900' : 'from-white via-blue-300/35 to-white border-cyan-300'} py-6 border-y-8 flex flex-col gap-4 md:gap-12`}>
         <div 
           className="slider"
           style={{
@@ -30,7 +30,7 @@ const Tech = ({ theme }: SectionProps) => {
                 key={`row1-${index}`}
                 title={tech.title}
               >
-                <StackIcon name={tech.name} variant={theme === 'dark' ? 'dark' : 'light'} />
+                <StackIcon name={tech.name} variant={theme === 'dark' ? 'dark' : 'light'} className="h-11 w-11 md:w-auto md:h-auto" />
               </div>
             ))}
           </div>
@@ -53,7 +53,7 @@ const Tech = ({ theme }: SectionProps) => {
                 key={`row2-${index}`}
                 title={tech.title}
               >
-                <StackIcon name={tech.name} variant={theme === 'dark' ? 'dark' : 'light'} />
+                <StackIcon name={tech.name} variant={theme === 'dark' ? 'dark' : 'light'} className="h-11 w-11 md:w-auto md:h-auto" />
               </div>
             ))}
           </div>
@@ -75,7 +75,7 @@ const Tech = ({ theme }: SectionProps) => {
                 key={`row3-${index}`}
                 title={tech.title}
               >
-                <StackIcon name={tech.name} variant={theme === 'dark' ? 'dark' : 'light'} />
+                <StackIcon name={tech.name} variant={theme === 'dark' ? 'dark' : 'light'} className="h-11 w-11 md:w-auto md:h-auto" />
               </div>
             ))}
           </div>
