@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, forwardRef } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiMenu, BiX } from "react-icons/bi";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { useTheme } from "../components/ThemeProvider";
+import { handleNavClick } from "../utils/navigation";
 
-const Header = () => {
+const Header = forwardRef<HTMLDivElement>((props, headerRef) => {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const headerRef = useRef<HTMLDivElement>(null);
   
   const navigationItems = [
     { label: "Home", href: "#home" },
@@ -17,20 +17,6 @@ const Header = () => {
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ]
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const href = e.currentTarget.href;
-    const target = href.substring(href.indexOf("#") + 1);
-
-    const targetElement = document.getElementById(target);
-    if (targetElement) {
-      const offset = -90;
-      const topPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
-      window.scrollTo({ top: topPosition, behavior: "smooth" });
-    }
-    setIsOpen(false);
-  }
 
   const socialLinks = [
     { href: "https://github.com/Rikuron", icon: <FaGithub />, label: "GitHub", hoverColor: "" },
@@ -152,6 +138,8 @@ const Header = () => {
       </div>
     </header>
   )
-}
+});
+
+Header.displayName = "Header";
 
 export default Header;

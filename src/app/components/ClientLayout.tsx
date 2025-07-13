@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { useTheme } from "./ThemeProvider";
 import Header from "../sections/Header";
+import { useHeaderHeight } from "../hooks/useHeaderHeight";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const { theme } = useTheme();
+  const headerRef = useRef<HTMLDivElement>(null);
+  const headerHeight = useHeaderHeight(headerRef);
 
   return (
     <body className="antialiased">
@@ -25,8 +28,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       />
       
       <div className="relative">
-        <Header />
-        <main>{children}</main>
+        <Header ref={headerRef} />
+        <main style={{ paddingTop: `${headerHeight + 40}px` }}>{children}</main>
         {/* <Footer /> */}
       </div>
     </body>

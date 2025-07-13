@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 // import { motion } from 'framer-motion';
 import { useTheme } from '../components/ThemeProvider';
+import { handleNavClick } from '../utils/navigation';
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -12,19 +13,6 @@ const Hero = () => {
     { label: "Projects", href: "#projects", buttonStyle: "${theme === 'dark' ? 'text-white hover:shadow-[0_0_30px_10px_rgba(0,112,243,0.2)]' : 'text-blue-500 hover:text-white hover:shadow-[0_0_30px_10px_rgba(0,112,243,0.3)]'} border-blue-500 hover:bg-blue-500" },
     { label: "Contact", href: "#contact", buttonStyle: "${theme === 'dark' ? 'text-white hover:text-yellow-300 hover:shadow-[0_0_30px_10px_rgba(255,224,138,0.2)]' : 'text-black hover:text-yellow-300 hover:bg-black hover:shadow-[0_0_30px_10px_rgba(255,224,138,0.6)]'} border-yellow-300" }
   ]
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const href = e.currentTarget.href;
-    const target = href.substring(href.indexOf("#") + 1);
-
-    const targetElement = document.getElementById(target);
-    if (targetElement) {
-      const offset = -90;
-      const topPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
-      window.scrollTo({ top: topPosition, behavior: "smooth" });
-    }
-  }
 
   return (
     <div className={`container w-[70%] flex flex-col md:flex-row gap-8 md:gap-0 mx-auto items-center justify-center ${theme === 'dark' ? 'text-white' : 'text-black'}`}>

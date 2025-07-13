@@ -1,6 +1,7 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect , ReactNode } from "react";
+import React, { createContext, useContext, ReactNode } from "react";
+import { usePersistentTheme } from "../hooks/usePersistentTheme";
 
 type Theme = "light" | "dark";
 
@@ -20,22 +21,7 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      setTheme(storedTheme as Theme);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  const { theme, toggleTheme } = usePersistentTheme();
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
