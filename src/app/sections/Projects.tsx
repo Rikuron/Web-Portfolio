@@ -8,7 +8,7 @@ type SectionProps = {
 
 const Projects = ({ theme }: SectionProps) => {
   return (
-    <div className="mx-auto mb-30 px-6 md:px-0 overflow-hidden md:overflow-auto">
+    <div id="projects" className="mx-auto mb-30 px-6 md:px-0 overflow-hidden md:overflow-auto">
       <h2 className={`text-2xl md:text-4xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-500 via-blue-700 to-black'} bg-clip-text text-transparent font-zen-dots text-center mb-8`}>
         Projects
       </h2>

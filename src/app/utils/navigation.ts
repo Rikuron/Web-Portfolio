@@ -4,6 +4,12 @@ export const handleNavClick = ( e: React.MouseEvent<HTMLAnchorElement> ) => {
   e.preventDefault();
   const href = e.currentTarget.href;
   const targetId = href.substring(href.indexOf("#") + 1);
+
+  if (targetId === 'home') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+  
   const targetElement = document.getElementById(targetId);
 
   if (targetElement) {

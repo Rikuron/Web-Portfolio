@@ -8,7 +8,7 @@ type SectionProps = {
 
 const Tech = ({ theme }: SectionProps) => {
   return (
-    <div className="my-25 overflow-x-hidden">
+    <div id="skills" className="my-25 overflow-x-hidden">
       <h2 className={`text-2xl md:text-4xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-500 via-blue-700 to-black'} bg-clip-text text-transparent font-zen-dots text-center mb-8`}>
         Skills and Technology Stack
       </h2>

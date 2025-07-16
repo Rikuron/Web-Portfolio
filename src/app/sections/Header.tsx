@@ -120,7 +120,7 @@ const Header = forwardRef<HTMLDivElement>((props, headerRef) => {
         <div className="flex flex-col items-center text-center gap-10 -mt-42">
           <ul className="flex flex-col gap-8">
             {navigationItems.map(item => (
-              <a key={item.href} href={`#${item.href}`} onClick={handleNavClick} className={`${theme === 'dark' ? 'text-white' : 'text-blue-700'} font-orbitron text-xl`}>
+              <a key={item.href} href={`${item.href}`} onClick={handleNavClick} className={`${theme === 'dark' ? 'text-white' : 'text-blue-700'} font-orbitron text-xl`}>
                 {item.label}
               </a>
             ))}
