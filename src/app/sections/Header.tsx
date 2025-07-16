@@ -20,8 +20,8 @@ const Header = forwardRef<HTMLDivElement>((props, headerRef) => {
 
   const socialLinks = [
     { href: "https://github.com/Rikuron", icon: <FaGithub />, label: "GitHub", hoverColor: "" },
-    { href: "https://www.linkedin.com/in/josh-eugenio-43148332b/", icon: <FaLinkedin />, label: "LinkedIn", hoverColor: "hover:text-blue-600" },
-    { href: "https://www.facebook.com/crislanejosh.eugenio/", icon: <FaFacebook />, label: "Facebook", hoverColor: "hover:text-blue-800" },
+    { href: "https://www.linkedin.com/in/josh-eugenio-43148332b/", icon: <FaLinkedin />, label: "LinkedIn", hoverColor: "hover:text-[#0077b5]" },
+    { href: "https://www.facebook.com/crislanejosh.eugenio/", icon: <FaFacebook />, label: "Facebook", hoverColor: "hover:text-[#1877f2]" },
   ]
 
   return (
