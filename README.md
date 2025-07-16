@@ -3,6 +3,9 @@
 Welcome to the source code for my personal web portfolio. This project is a redo of my previous personal web portfolio. Previously built using Vite, now I'm using Next.js, as well as React and Tailwind CSS, showcasing my skills, projects, and professional background as a web developer. It's designed to be clean, responsive, and performant, featuring a modern technology stack and best practices.
 
 <!-- You can add a screenshot of your portfolio here -->
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a1d51521-80ff-4ee9-b4af-0206a02e9e94" />
+
+Web Portfolio Link: [https://rikuron-web-portfolio.vercel.app](https://rikuron-web-portfolio.vercel.app)
 <!-- ![Portfolio Screenshot](link-to-your-screenshot.png) -->
 
 ---
