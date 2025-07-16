@@ -79,8 +79,8 @@ next-ts/ <br>
 ├── public/ # Static assets like fonts and images <br>
 ├── src/ <br>
 │ ├── app/ <br>
-│ | ├── components/ # Reusable client components (ThemeProvider, ProjectCard) <br>
-| | ├── hooks/ # Custom React hooks (usePersistentTheme, useHeaderHeight)
+│ │ ├── components/ # Reusable client components (ThemeProvider, ProjectCard) <br>
+│ │ ├── hooks/ # Custom React hooks (usePersistentTheme, useHeaderHeight)
 │ │ ├── sections/ # Major UI sections (Header, Hero, Tech, Projects, Footer,) <br>
 │ │ ├── utils/ # Utility functions (navigation, project data) <br>
 │ │ ├── globals.css # Global styles and theme variables <br>
