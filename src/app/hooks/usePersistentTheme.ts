@@ -19,6 +19,7 @@ export function usePersistentTheme(): {
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {

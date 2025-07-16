@@ -28,6 +28,7 @@ const ProjectCard = ({ project, theme, index }: ProjectCardProps) => {
     setCurrentIndex(newIndex);
   }
 
+  // Alternating animation variants. Fade in from left to right and vice versa
   const variants = {
     hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
     visible: { opacity: 1, x: 0 }
