@@ -109,7 +109,7 @@ const ProjectCard = ({ project, theme, index }: ProjectCardProps) => {
       </div>
 
       <div className={`text-container w-full md:w-[40%] mt-4 md:mt-0 ${index % 2 !== 0 ? 'md:mr-3' : 'md:ml-3'}`}>
-        <h3 className={`font-orbitron text-2xl ${theme === 'dark' ? 'text-cyan-400' : 'text-blue-700'} mb-4`}>{project.name}</h3>
+        <h3 className={`font-orbitron text-xl md:text-2xl ${theme === 'dark' ? 'text-cyan-400' : 'text-blue-700'} mb-4`}>{project.name}</h3>
         <p className={`font-electrolize ${theme === 'dark' ? 'text-white' : 'text-black'} text-justify`}>{project.description}</p>
         
         <div className="tech-stack flex flex-wrap items-center my-3 gap-2">

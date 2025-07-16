@@ -14,7 +14,7 @@ const Contact = ({ theme }: SectionProps) => {
       transition={{duration: 0.8}}
       className="flex flex-col items-center justify-center space-y-8 mb-20"
     >
-      <h2 className={`font-zen-dots text-5xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-400 via-blue-700 to-black'} bg-clip-text text-transparent`}> 
+      <h2 className={`font-zen-dots text-3xl md:text-5xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-400 via-blue-700 to-black'} text-center bg-clip-text text-transparent`}> 
         Wanna Get in Touch? 
       </h2>
 
@@ -26,12 +26,12 @@ const Contact = ({ theme }: SectionProps) => {
         <a 
           href="mailto:josheugenio65@gmail.com" 
           target='blank' 
-          className={`p-4 ${theme === 'dark' ? 'bg-black text-white border-cyan-500 shadow-cyan-600 hover:shadow-cyan-500' : 'bg-blue-500 text-white border-blue-500 shadow-blue-400 hover:bg-blue-500/80 hover:border-blue-500/80 hover:shadow-blue-400'} font-zen-dots text-lg rounded-lg border shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
+          className={`p-3 md:p-4 ${theme === 'dark' ? 'bg-black text-white border-cyan-500 shadow-cyan-600 hover:shadow-cyan-500' : 'bg-blue-500 text-white border-blue-500 shadow-blue-400 hover:bg-blue-500/80 hover:border-blue-500/80 hover:shadow-blue-400'} font-zen-dots text-sm md:text-lg rounded-lg border shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
         >
           Send Email
         </a>
 
-        <div className={`flex items-center justify-center space-x-6 text-4xl ${theme === 'dark' ? 'text-white/80' : 'text-black'}`}>
+        <div className={`flex items-center justify-center space-x-6 text-3xl md:text-4xl ${theme === 'dark' ? 'text-white/80' : 'text-black'}`}>
           <a href="https://www.linkedin.com/in/josh-eugenio-43148332b/" target='blank'>
             <FaLinkedin className="hover:text-[#0077b5] transition-all duration-300 ease-in-out" />
           </a>

@@ -30,7 +30,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <div className="relative">
         <Header ref={headerRef} />
         <main style={{ paddingTop: `${headerHeight + 40}px` }}>{children}</main>
-        {/* <Footer /> */}
       </div>
     </body>
   )
