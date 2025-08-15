@@ -48,8 +48,8 @@ export const projectData: Project[] = [
     ]
   },
   {
-    "name": "Barangay Dulag Profiling System",
-    "description": "Take note this is UNOFFICIAL . This is merely just another undergraduate course requirement I had to submit. Basically, this is a fullstack web application that contains a Front/Landing Page and a Dashboard for a Barangay System for Dulag, Iligan City.",
+    "name": "Barangay Profiling System",
+    "description": "A fullstack web application that contains a Front/Landing Page and a Dashboard for a Barangay System in Iligan City. This was used for our research for craeting a  web-based repository for demographic information in the grassroots level or in Barangays. We presented this in a research paper for the 8th Information Systems International Conference 2025 and our research has been accepted for publication in the conference proceedings.",
     "techStack": [
       { "name": "html5", "title": "HTML5" },
       { "name": "css3", "title": "CSS3" },
