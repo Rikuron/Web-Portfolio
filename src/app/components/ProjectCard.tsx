@@ -108,8 +108,8 @@ const ProjectCard = ({ project, theme, index }: ProjectCardProps) => {
         </div>
       </div>
 
-      <div className={`text-container w-full md:w-[40%] mt-4 md:mt-0 ${index % 2 !== 0 ? 'md:mr-3' : 'md:ml-3'}`}>
-        <h3 className={`font-orbitron text-xl md:text-2xl ${theme === 'dark' ? 'text-cyan-400' : 'text-blue-700'} mb-4`}>{project.name}</h3>
+      <div className={`text-container flex flex-col w-full md:w-[40%] mt-4 md:mt-0 ${index % 2 !== 0 ? 'md:mr-3' : 'md:ml-3'}`}>
+        <h3 className={`font-orbitron text-lg md:text-xl ${theme === 'dark' ? 'text-cyan-400' : 'text-blue-700'} mb-4`}>{project.name}</h3>
         <p className={`font-electrolize ${theme === 'dark' ? 'text-white' : 'text-black'} text-justify`}>{project.description}</p>
         
         <div className="tech-stack flex flex-wrap items-center my-3 gap-2">
@@ -120,7 +120,7 @@ const ProjectCard = ({ project, theme, index }: ProjectCardProps) => {
           ))}
         </div>
 
-        <div className="links flex items-center space-x-4 mt-4 ml-3">
+        <div className="links flex items-center space-x-4 mt-auto ml-1.5">
           <a href={project.githubLink} target="_blank" rel="noopener noreferrer" title="GitHub Repository">
             <FaGithub className={`${theme === 'dark' ? 'text-white hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.4)]' : 'text-black/80 hover:shadow-[0_0_30px_10px_rgba(0,0,0,0.15)]'} text-3xl hover:cursor-pointer transition duration-300 ease-in-out rounded-full`} />
           </a>
