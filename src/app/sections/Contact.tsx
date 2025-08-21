@@ -15,7 +15,7 @@ const Contact = ({ theme }: SectionProps) => {
       transition={{duration: 0.8}}
       className="flex flex-col items-center justify-center space-y-8 mb-20"
     >
-      <h2 className={`font-zen-dots text-3xl md:text-5xl bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-400 via-blue-700 to-black'} text-center bg-clip-text text-transparent`}> 
+      <h2 className={`font-zen-dots text-3xl md:text-5xl px-4 bg-gradient-to-r ${theme === 'dark'? 'from-blue-500 to-yellow-300' : 'from-blue-400 via-blue-700 to-black'} text-center bg-clip-text text-transparent`}> 
         Wanna Get in Touch? 
       </h2>
 
