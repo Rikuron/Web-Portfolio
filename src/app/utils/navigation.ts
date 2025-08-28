@@ -13,7 +13,12 @@ export const handleNavClick = ( e: React.MouseEvent<HTMLAnchorElement> ) => {
   const targetElement = document.getElementById(targetId);
 
   if (targetElement) {
-    const offset = -90;
+    let offset = -90;
+
+    if (targetId === 'contact') { 
+      offset = -140;
+    }
+
     const topPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
     window.scrollTo({ top: topPosition, behavior: "smooth" });
   }

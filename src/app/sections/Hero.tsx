@@ -38,7 +38,7 @@ const Hero = ({ theme }: SectionProps) => {
           <p className="text-md md:text-lg text-center md:text-justify font-electrolize">
             I am a Fullstack Web Developer and aspiring Game and Blockchain Developer. With a strong drive for creating, innovating, and learning, I do my best to create high-quality and user-friendly applications.
           </p>
-          <div className="button-container flex items-center justify-center space-x-6 mt-6">
+          <div className="button-container flex items-center md:justify-start justify-center space-x-6 mt-6">
             {navigationItems.map((item) => (
               <a 
                 key={item.label}
