@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaFacebook, FaDiscord, FaInstagram, FaDownload, FaSpinner, FaPaperPlane } from "react-icons/fa";
+import { FaDownload, FaSpinner, FaPaperPlane } from "react-icons/fa";
+import { socialMedia } from "../utils/socmed";
 import emailjs from "@emailjs/browser";
 
 type SectionProps = {
@@ -206,28 +207,39 @@ const Contact = ({ theme }: SectionProps) => {
 
       {/* Social Media Links */}
       <div className={`flex items-center justify-center space-x-6 text-3xl md:text-4xl ${theme === 'dark' ? 'text-white/80' : 'text-black'}`}>
-        <a href="https://www.linkedin.com/in/josh-eugenio-43148332b/" target='_blank' rel="noopener noreferrer">
-          <FaLinkedin className="hover:text-[#0077b5] transition-all duration-300 ease-in-out" />
-        </a>
-        <a href="https://github.com/josh-eugenio" target='_blank' rel="noopener noreferrer">
-          <FaGithub className="hover:text-white transition-all duration-300 ease-in-out" />
-        </a>
-        <a href="https://www.facebook.com/crislanejosh.eugenio" target='_blank' rel="noopener noreferrer">
-          <FaFacebook className="hover:text-[#1877f2] transition-all duration-300 ease-in-out" /> 
-        </a>
-        <button 
-          onClick={() => {
-            navigator.clipboard.writeText("rikur0n");
-            alert('Discord username has been copied to your clipboard!');
-          }} 
-          className="hover:cursor-pointer"
-          title="Click to copy Discord username"
-        >
-          <FaDiscord className="hover:text-[#5865F2] transition-all duration-300 ease-in-out" />
-        </button>
-        <a href="https://www.instagram.com/sh00.py/" target='_blank' rel="noopener noreferrer">
-          <FaInstagram className="hover:text-[#E1306C] transition-all duration-300 ease-in-out" />
-        </a>
+        {socialMedia.map((social, index) => {
+          const IconComponent = social.logo
+
+          // Handle special case for Discord
+          if (social.name === "Discord") {
+            return (
+              <button
+                key={index}
+                onClick={() => {
+                  navigator.clipboard.writeText(`${social.username}`)
+                  alert(`Copied to clipboard: ${social.username}`)
+                }}
+                className="hover:cursor-pointer"
+                title="Click to copy Josh's Discord username"
+              >
+                <IconComponent className={`${social.hoverColor} transition-all duration-300 ease-in-out`} />
+              </button>
+            )
+          }
+
+          return (
+            <a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${social.name}`}
+              title={`Visit Josh's ${social.name}`}
+            >
+              <IconComponent className={`${social.hoverColor} transition-all duration-300 ease-in-out`} />
+            </a>
+          )
+        })}
       </div>
     </motion.div>
   )
